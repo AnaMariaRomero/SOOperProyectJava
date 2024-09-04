@@ -1,2 +1,2 @@
 # SOOperProyectJava
-Puesta en práctica del Curso: conviértete en especialista en desarrollo en Java.
+Puesta en práctica del itirenario [Conviértete en especialista en desarrollo en Java](https://www.linkedin.com/learning/paths/conviertete-en-especialista-en-desarrollo-java). El proyecto SOOper sigue al curso: [Java: Programación orientada a objetos esencial](https://www.linkedin.com/learning/java-programacion-orientada-a-objetos-esencial?contextUrn=urn%3Ali%3AlyndaLearningPath%3A58da9480498e4504b593d6e5)
