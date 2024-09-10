@@ -1,14 +1,14 @@
-package sooper.contenedores;
+package sooper;
 
 import java.util.Set;
-
-import sooper.productos.IProducto;
 
 public interface IContenedor {
 
     String getReferencia();
 
     int getVolumen();
+
+    int getSuperficie();
 
     int volumentDisponible();
 
@@ -24,7 +24,5 @@ public interface IContenedor {
 
     boolean ocupado();
 
-    static void getContenedores() {
-
-    }
+    void getContenedores();
 }

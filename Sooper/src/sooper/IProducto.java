@@ -1,6 +1,4 @@
-package sooper.productos;
-
-import sooper.contenedores.IContenedor;
+package sooper;
 
 public interface IProducto {
 

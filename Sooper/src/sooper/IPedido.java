@@ -1,8 +1,6 @@
 package sooper;
 
 import java.util.Set;
-import sooper.contenedores.IContenedor;
-import sooper.productos.IProducto;
 
 public interface IPedido {
 
