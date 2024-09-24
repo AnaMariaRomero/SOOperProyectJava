@@ -8,9 +8,9 @@ public interface IPedido {
 
     Set<IProducto> getProductos();
 
-    Set<IContenedor> getCibContenedores();
+    Set<IContenedor> getContenedores();
 
-    void assContenedor(IContenedor contendor);
+    void addContenedor(IContenedor contendor);
 
     IContenedor addProducto(IProducto producto);
 }

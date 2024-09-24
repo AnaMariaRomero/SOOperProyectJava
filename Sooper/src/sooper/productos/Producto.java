@@ -5,24 +5,29 @@ import sooper.IProducto;
 
 public abstract class Producto implements IProducto {
 
+    private int peso;
+    private String referencia;
+    private int volumen;
+
+    public Producto(String referencia, int peso, int volumen) {
+        this.peso = peso;
+        this.volumen = volumen;
+        this.referencia = referencia;
+    }
+
     @Override
     public String getReferencia() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return referencia;
     }
 
     @Override
     public int getPeso() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return peso;
     }
 
     @Override
     public int getVolumen() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public String getCategoria() {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return volumen;
     }
 
     @Override

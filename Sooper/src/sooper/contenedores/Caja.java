@@ -1,8 +1,9 @@
 package sooper.contenedores;
 
+import sooper.enums.TipoContenedor;
+
 public class Caja extends Contenedor {
 
-    private final String tipo = "caja";
     private int ancho;
     private int largo;
 
@@ -17,8 +18,8 @@ public class Caja extends Contenedor {
         return getLargo() * getAncho();
     }
 
-    public String getTipo() {
-        return tipo;
+    public TipoContenedor getTipo() {
+        return TipoContenedor.CAJA;
     }
 
     public int getLargo() {
