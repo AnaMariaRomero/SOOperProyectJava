@@ -12,7 +12,7 @@ public interface IProducto {
 
     Categoria getCategoria();
 
-    boolean esCompatible();
+    boolean esCompatible(IProducto p);
 
     boolean tengoEspacio(IContenedor contenedor);
 

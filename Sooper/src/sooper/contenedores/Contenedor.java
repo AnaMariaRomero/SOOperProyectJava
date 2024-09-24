@@ -1,5 +1,6 @@
 package sooper.contenedores;
 
+import java.util.Iterator;
 import java.util.Set;
 import sooper.IContenedor;
 import sooper.IProducto;
@@ -43,12 +44,28 @@ public abstract class Contenedor implements IContenedor {
 
     @Override
     public boolean meter(IProducto producto) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        boolean resistenciaOk = this.resiste(producto);
+        boolean volumenOk = producto.tengoEspacio(this);
+        boolean compatibilidadOk = true;
+
+        boolean compatibleOk;
+        for (Iterator var6 = this.productos.iterator(); var6.hasNext(); compatibilidadOk &= compatibleOk) {
+            IProducto p = (IProducto) var6.next();
+            compatibleOk = producto.esCompatible(p);
+        }
+
+        boolean acepta = resistenciaOk && volumenOk && compatibilidadOk;
+        if (acepta) {
+            this.productos.add(producto);
+            //producto.meter(this);
+        }
+
+        return acepta;
     }
 
     @Override
     public boolean resiste(IProducto producto) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        return this.resistencia > producto.getPeso();
     }
 
     @Override

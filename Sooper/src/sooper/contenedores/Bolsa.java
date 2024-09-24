@@ -13,19 +13,22 @@ public class Bolsa extends Contenedor {
         this.ancho = ancho;
     }
 
+    @Override
     public int getSuperficie() {
         return (int) (Math.PI) * ((this.getDiametro()) / 2) * 2;
     }
 
+    @Override
     public TipoContenedor getTipo() {
         return TipoContenedor.BOLSA;
     }
 
     public int getDiametro() {
-        return this.ancho;
+        return (int) ((2 * this.ancho) / Math.PI);
     }
 
-    public int getResistencia(){
+    @Override
+    public int getResistencia() {
         return resistencia;
     }
 

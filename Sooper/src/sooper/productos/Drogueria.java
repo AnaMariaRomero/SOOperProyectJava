@@ -1,9 +1,10 @@
 package sooper.productos;
 
+import sooper.IProducto;
 import sooper.enums.Categoria;
 
-public class Drogueria extends Producto{
-   
+public class Drogueria extends Producto {
+
     public Drogueria(String referencia, int peso, int volumen) {
         super(referencia, peso, volumen);
     }
@@ -11,5 +12,10 @@ public class Drogueria extends Producto{
     @Override
     public Categoria getCategoria() {
         return Categoria.DROGUERIA;
+    }
+
+    @Override
+    public boolean esCompatible(IProducto p) {
+        throw new UnsupportedOperationException("Not supported yet.");
     }
 }

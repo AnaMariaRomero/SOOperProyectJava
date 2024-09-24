@@ -5,9 +5,10 @@ import sooper.IProducto;
 
 public abstract class Producto implements IProducto {
 
-    private int peso;
-    private String referencia;
-    private int volumen;
+    private final int peso;
+    private final String referencia;
+    private final int volumen;
+    private IContenedor contenedor;
 
     public Producto(String referencia, int peso, int volumen) {
         this.peso = peso;
@@ -31,13 +32,12 @@ public abstract class Producto implements IProducto {
     }
 
     @Override
-    public boolean esCompatible() {
+    public boolean tengoEspacio(IContenedor contenedor) {
         throw new UnsupportedOperationException("Not supported yet.");
     }
 
-    @Override
-    public boolean tengoEspacio(IContenedor contenedor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+    public void meter(IContenedor contenedor) {
+        this.contenedor = contenedor;
     }
 
 }
