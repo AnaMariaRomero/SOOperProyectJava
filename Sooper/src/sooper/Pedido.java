@@ -10,7 +10,7 @@ public class Pedido implements IPedido {
 
     public Pedido(String referencia) {
         this.referencia = referencia;
-        this.contenedores = new HashSet();
+        this.contenedores = new HashSet<>();
     }
 
     @Override
@@ -36,8 +36,11 @@ public class Pedido implements IPedido {
 
     @Override
     public IContenedor addProducto(IProducto producto) {
+        //recorremos todos los productos
         for (IContenedor contenedor : this.contenedores) {
+            //luego, preguntamos al contenedor si admite el producto
             if (contenedor.meter(producto)) {
+                //devolvemos el contenedor donde colocamos el producto
                 return contenedor;
             }
         }
@@ -52,6 +55,9 @@ public class Pedido implements IPedido {
         string.append("Pedido").append(referencia).append("\n");
         for (IContenedor contenedor : contenedores) {
             string.append("\t").append(contenedor).append("\n");
+            for (IProducto producto : contenedor.getProductos()) {
+                string.append("\t").append(producto).append("\n");
+            }
         }
         return string.toString();
     }

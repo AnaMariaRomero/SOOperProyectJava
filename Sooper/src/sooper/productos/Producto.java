@@ -33,11 +33,21 @@ public abstract class Producto implements IProducto {
 
     @Override
     public boolean tengoEspacio(IContenedor contenedor) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //necesito decirle si tengo espacio dentro de mi contenedor
+        return contenedor.volumentDisponible() > volumen;
     }
 
     public void meter(IContenedor contenedor) {
         this.contenedor = contenedor;
     }
 
+    //sobreescribo el toString para mostrar el contenido del producto    @Override
+    @Override
+    public String toString() {
+        return "Producto{"
+                + "peso=" + peso
+                + ", referencia='" + referencia + '\''
+                + ", volumen=" + volumen
+                + '}';
+    }
 }

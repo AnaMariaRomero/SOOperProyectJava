@@ -16,6 +16,7 @@ public class Higiene extends Producto {
 
     @Override
     public boolean esCompatible(IProducto p) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //tenemos que asegurar que NO sea de alimentacion
+        return !Categoria.ALIMENTACION.equals(p.getCategoria());
     }
 }

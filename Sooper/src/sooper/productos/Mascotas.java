@@ -16,7 +16,7 @@ public class Mascotas extends Producto {
 
     @Override
     public boolean esCompatible(IProducto p) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'esCompatible'");
+        //comprobar que no es de Drogueria
+        return !p.getCategoria().equals(Categoria.DROGUERIA);
     }
 }

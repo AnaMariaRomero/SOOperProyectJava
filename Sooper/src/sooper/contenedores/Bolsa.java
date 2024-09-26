@@ -4,12 +4,10 @@ import sooper.enums.TipoContenedor;
 
 public class Bolsa extends Contenedor {
 
-    private final int resistencia;
     private final int ancho;
 
     public Bolsa(String referencia, int alto, int ancho, int resistencia) {
-        super(referencia, alto);
-        this.resistencia = resistencia;
+        super(referencia, alto, resistencia);
         this.ancho = ancho;
     }
 
@@ -25,11 +23,6 @@ public class Bolsa extends Contenedor {
 
     public int getDiametro() {
         return (int) ((2 * this.ancho) / Math.PI);
-    }
-
-    @Override
-    public int getResistencia() {
-        return resistencia;
     }
 
 }

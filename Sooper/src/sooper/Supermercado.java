@@ -29,7 +29,7 @@ public class Supermercado {
         IContenedor contenedorPapel = iPedido.addProducto(papelWC);
         IContenedor contenedorPeras = iPedido.addProducto(peras);
 
-        System.out.println("Mi pedido: " + iPedido);
+        System.out.println("Mi pedido: " + iPedido.toString());
 
     }
 }

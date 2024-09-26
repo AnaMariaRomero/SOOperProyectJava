@@ -14,8 +14,10 @@ public class Alimentacion extends Producto {
         return Categoria.ALIMENTACION;
     }
 
+    //dejo que cada clase que extiende del producto (las hijas) me diga si es compatible
     @Override
     public boolean esCompatible(IProducto p) {
+        //comprobamos que la categoria del producto sea Alimentacion
         return Categoria.ALIMENTACION.equals(p.getCategoria());
     }
 }

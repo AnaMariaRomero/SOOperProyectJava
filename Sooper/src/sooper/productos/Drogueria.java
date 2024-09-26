@@ -16,6 +16,8 @@ public class Drogueria extends Producto {
 
     @Override
     public boolean esCompatible(IProducto p) {
-        throw new UnsupportedOperationException("Not supported yet.");
+        //comprobamos que NO sean de alimetacion NI TAMPOCO mascotas
+        return !Categoria.ALIMENTACION.equals(p.getCategoria())
+                && !Categoria.MASCOTAS.equals(p.getCategoria());
     }
 }
