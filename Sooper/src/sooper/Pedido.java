@@ -10,7 +10,7 @@ public class Pedido implements IPedido {
 
     public Pedido(String referencia) {
         this.referencia = referencia;
-        this.contenedores = new HashSet<>();
+        this.contenedores = new HashSet();
     }
 
     @Override
@@ -20,8 +20,16 @@ public class Pedido implements IPedido {
 
     @Override
     public Set<IProducto> getProductos() {
-
-        return null;
+        Set<IProducto> productos = null;
+        //recorremos todos los productos
+        for (IContenedor contenedor : this.contenedores) {
+            if (productos == null) {
+                productos = contenedor.getProductos();
+            } else {
+                productos.addAll(contenedor.getProductos());
+            }
+        }
+        return productos;
     }
 
     @Override

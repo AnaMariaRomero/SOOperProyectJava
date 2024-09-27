@@ -79,7 +79,7 @@ public abstract class Contenedor implements IContenedor {
         boolean acepta = resistenciaOk && volumenOk && compatibilidadOk;
         if (acepta) {
             this.productos.add(producto);
-            //producto.meter(this);
+            producto.meter(this);
         }
 
         return acepta;
@@ -90,15 +90,4 @@ public abstract class Contenedor implements IContenedor {
         //el peso del producto debe ser más pqueño que la resistencia del contenedor
         return producto.getPeso() < this.resistencia;
     }
-
-    @Override
-    public boolean ocupado() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    @Override
-    public void getContenedores() {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
 }

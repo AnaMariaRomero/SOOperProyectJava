@@ -1,7 +1,6 @@
 package sooper;
 
 import java.util.Set;
-
 import sooper.enums.TipoContenedor;
 
 public interface IContenedor {
@@ -23,8 +22,4 @@ public interface IContenedor {
     boolean meter(IProducto producto);
 
     boolean resiste(IProducto producto);
-
-    boolean ocupado();
-
-    void getContenedores();
 }

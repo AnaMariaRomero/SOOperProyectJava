@@ -16,7 +16,5 @@ public interface IProducto {
 
     boolean tengoEspacio(IContenedor contenedor);
 
-    public static void getProductos() {
-
-    }
+    void meter(IContenedor var1);
 }

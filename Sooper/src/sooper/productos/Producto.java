@@ -44,10 +44,7 @@ public abstract class Producto implements IProducto {
     //sobreescribo el toString para mostrar el contenido del producto    @Override
     @Override
     public String toString() {
-        return "Producto{"
-                + "peso=" + peso
-                + ", referencia='" + referencia + '\''
-                + ", volumen=" + volumen
-                + '}';
+        return "Producto [referencia=" + referencia + ", contenedor="
+                + (this.contenedor != null ? this.contenedor.getReferencia() : "Sin contenedor") + "]";
     }
 }
